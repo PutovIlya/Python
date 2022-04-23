@@ -1,0 +1,15 @@
+from math import *
+
+
+def main(z):
+    if z < -19:
+        return 53*z**6
+    elif z >= -19 and z < 9:
+        return z**2-(98*z**2)**7
+    elif z >= 9 and z < 108:
+        return 8*(51*z**3+30*z+z**2)**3
+    elif z >= 108 and z < 185:
+        return 6*cos(81*z-((z**2)/67))
+    elif z >= 185:
+        return (31*z**2+(z**3/22)+66)**2
+        print(main(145))
