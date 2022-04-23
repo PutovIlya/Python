@@ -1,0 +1,20 @@
+import math
+
+
+def main(n, m, a):
+   a1 = 0
+   a2 = 0
+   ans = 0
+   for k in range(1, a+1):
+       a2 += a1
+       a1 = 0
+       for j in range(1, m+1):
+           a1 += ans
+           ans = 0
+           for c in range (1, n+1):
+               ans += k/11
+               ans -= (c**2-1)**4
+               ans -= 9*(76*j**3)**5
+               return a2+a1+ans
+#print(main(4, 8, 3))
+print(main(3, 3, 6))
